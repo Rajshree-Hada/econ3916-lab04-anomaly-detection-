@@ -14,7 +14,7 @@ I wanted to see how outliers affect different summary statistics, and whether a 
 - Added 5% corrupted values to the data and checked how much each statistic moved.
 
 ## Key Findings
-- After adding 5% corrupted values, the mean shifted by [YOUR VALUE]%, while the median only shifted by [YOUR VALUE]%.
+- After adding 5% corrupted values, the mean shifted by 67.1%, while the median only shifted by 3.6%.
 - The statistics built to resist outliers (median, trimmed mean, IQR, MAD) held steady even with corrupted data, while the mean and standard deviation moved more.
 - Tukey Fences and Isolation Forest didn't flag the same observations. Tukey only looks at one column, so it can miss unusual combinations across multiple features that Isolation Forest catches.
 - Some of the flagged "outliers" turned out to be a known data limit ($500,001 price cap), not real extreme values, which shows why I need to check what's behind a flag before deciding what to do with it.
